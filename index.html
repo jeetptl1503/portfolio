@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jeet Patel — B.Tech student, builder, and tech enthusiast interested in AI, ML, Robotics, and emerging technologies." />
+  <title>Jeet Patel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ───────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">JP</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-eyebrow anim-fade-down">Hey, I'm</p>
+        <h1 class="hero-name anim-fade-up">Jeet Patel</h1>
+        <p class="hero-tagline anim-fade-up delay-1">Always like to create stuff.</p>
+        <div class="hero-cta anim-fade-up delay-2">
+          <a href="#projects" class="btn btn-primary" id="hero-btn-projects">View Projects</a>
+          <a href="#contact"  class="btn btn-ghost"   id="hero-btn-contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orb-scene" id="orb-scene">
+          <div class="orb-ring r1"></div>
+          <div class="orb-ring r2"></div>
+          <div class="orb-ring r3"></div>
+          <div class="orb-core">
+            <svg class="code-icon" viewBox="0 0 80 80" fill="none">
+              <path d="M26 28L14 40L26 52" stroke="#58A6FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M54 28L66 40L54 52" stroke="#58A6FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M44 22L36 58" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="fp fp1"></div>
+          <div class="fp fp2"></div>
+          <div class="fp fp3"></div>
+          <div class="fp fp4"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="mouse-icon">
+        <div class="mouse-dot"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────── -->
+  <section class="section about" id="about">
+    <div class="container">
+      <span class="section-chip reveal" data-anim="slide-right">About</span>
+      <h2 class="section-title reveal" data-anim="fade-up">
+        Passionate builder.<br/>Curious by nature.
+      </h2>
+
+      <div class="about-layout">
+        <div class="about-text-block reveal" data-anim="fade-up" data-delay="100">
+          <p class="about-lead">
+            I'm a B.Tech student pursuing a degree in Electronics and Communication Engineering, building things I wish existed — and a few I probably shouldn't.
+          </p>
+          <p class="about-body">
+            Deeply interested in Robotics, Control Systems, Artificial Intelligence, Machine Learning, and whatever new technology drops next week. I spend a lot of time tinkering, breaking things apart to understand them, and occasionally putting them back together as something better.
+          </p>
+          <p class="about-body">
+            I believe the best way to learn is to ship — so I build projects, experiment with AI tools, and keep pushing the boundaries of what I can make with code and creativity.
+          </p>
+        </div>
+
+        <div class="about-tags-block reveal" data-anim="fade-left" data-delay="200">
+          <div class="interest-tag">⚡ Robotics</div>
+          <div class="interest-tag">🎛️ Control Systems</div>
+          <div class="interest-tag">🧠 Artificial Intelligence</div>
+          <div class="interest-tag">📈 Machine Learning</div>
+          <div class="interest-tag">🔭 Emerging Tech</div>
+          <div class="interest-tag">🛠️ Building Projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ──────────────────────────────────────────── -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <span class="section-chip reveal" data-anim="slide-right">Projects</span>
+      <h2 class="section-title reveal" data-anim="fade-up">Things I've Built</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal" data-anim="card-rise" data-delay="0" id="project-bharatagri">
+          <div class="project-inner">
+            <div class="project-top">
+              <div class="project-number">01</div>
+              <div class="project-tags">
+                <span>AI</span><span>Agriculture</span>
+              </div>
+            </div>
+            <h3 class="project-title">BharatAgri-AI</h3>
+            <p class="project-desc">
+              An AI-powered platform helping Indian farmers make smarter, data-driven decisions — from crop recommendations to yield prediction using machine learning.
+            </p>
+            <div class="project-links">
+              <a href="https://bharatagri-ai.vercel.app/" target="_blank" rel="noopener" class="plink plink-primary" id="btn-bharatagri-live">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9M10 2h4v4M14 2L8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Live Site
+              </a>
+              <a href="https://github.com/jeetptl1503/BharatAgri-AI" target="_blank" rel="noopener" class="plink plink-ghost" id="btn-bharatagri-github">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="card-line"></div>
+        </article>
+
+        <article class="project-card reveal" data-anim="card-rise" data-delay="120" id="project-vibebuild">
+          <div class="project-inner">
+            <div class="project-top">
+              <div class="project-number">02</div>
+              <div class="project-tags">
+                <span>Dev</span><span>Creative</span>
+              </div>
+            </div>
+            <h3 class="project-title">VibeBuild</h3>
+            <p class="project-desc">
+              A platform for building creative software ideas fast — experimenting with modern dev workflows and AI tools to turn rough ideas into real, shipped products.
+            </p>
+            <div class="project-links">
+              <a href="https://vibe-build-two.vercel.app/" target="_blank" rel="noopener" class="plink plink-primary" id="btn-vibebuild-live">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9M10 2h4v4M14 2L8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Live Site
+              </a>
+              <a href="https://github.com/jeetptl1503/VibeBuild" target="_blank" rel="noopener" class="plink plink-ghost" id="btn-vibebuild-github">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="card-line"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────── -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <span class="section-chip reveal" data-anim="slide-right">Contact</span>
+      <h2 class="section-title reveal" data-anim="fade-up">Let's Connect</h2>
+      <p class="contact-sub reveal" data-anim="fade-up" data-delay="100">
+        Reach out — I'm always up for interesting conversations, collaborations, or a good problem to solve.
+      </p>
+
+      <div class="contact-list">
+        <a href="mailto:jeetpatel.sms@gmail.com" class="contact-row reveal" data-anim="slide-up" data-delay="0" id="contact-email">
+          <span class="crow-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2 8l10 7 10-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="crow-label">Email</span>
+          <span class="crow-value">jeetpatel.sms@gmail.com</span>
+          <span class="crow-arrow">↗</span>
+        </a>
+        <a href="https://github.com/jeetptl1503" target="_blank" rel="noopener" class="contact-row reveal" data-anim="slide-up" data-delay="80" id="contact-github">
+          <span class="crow-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </span>
+          <span class="crow-label">GitHub</span>
+          <span class="crow-value">github.com/jeetptl1503</span>
+          <span class="crow-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jeet-patel-b393b4238/" target="_blank" rel="noopener" class="contact-row reveal" data-anim="slide-up" data-delay="160" id="contact-linkedin">
+          <span class="crow-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M7 10v7M7 7v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 17v-4.5c0-1.4 1-2.5 2.5-2.5S16 11.1 16 12.5V17M11 12.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="crow-label">LinkedIn</span>
+          <span class="crow-value">Jeet Patel</span>
+          <span class="crow-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-made">Made by Jeet using AI 🤖✨</span>
+      <span class="footer-mid">© 2026 Jeet Patel · MIT License</span>
+      <span class="footer-right">Built with ❤️ &amp; caffeine ☕</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
