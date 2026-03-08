@@ -1,3 +1,1 @@
-know me 
-
-portfolio
+know me
