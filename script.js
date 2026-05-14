@@ -1,9 +1,7 @@
-/* ════════════════════════════════════════════════════════════
-   script.js — Portfolio Interactions
-   ════════════════════════════════════════════════════════════ */
+
 'use strict';
 
-/* ── Nav scroll ─────────────────────────────────────────────── */
+
 (function () {
   const nav = document.getElementById('nav');
   const tick = () => nav.classList.toggle('scrolled', window.scrollY > 20);
@@ -11,7 +9,6 @@
   tick();
 })();
 
-/* ── Hamburger ──────────────────────────────────────────────── */
 (function () {
   const btn   = document.getElementById('hamburger');
   const links = document.getElementById('nav-links');
@@ -30,7 +27,6 @@
   links.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', () => setOpen(false)));
 })();
 
-/* ── Scroll reveal (data-anim + data-delay) ─────────────────── */
 (function () {
   const reveals = document.querySelectorAll('.reveal');
 
@@ -52,7 +48,6 @@
   reveals.forEach(el => io.observe(el));
 })();
 
-/* ── Active nav link highlight ──────────────────────────────── */
 (function () {
   const sections = document.querySelectorAll('section[id]');
   const links    = document.querySelectorAll('.nav-link');
@@ -70,7 +65,6 @@
   sections.forEach(s => io.observe(s));
 })();
 
-/* ── Hero canvas — animated node graph ──────────────────────── */
 (function () {
   const canvas = document.getElementById('hero-canvas');
   if (!canvas) return;
@@ -97,14 +91,13 @@
       vx: (Math.random() - 0.5) * 0.3,
       vy: (Math.random() - 0.5) * 0.22,
       ph: Math.random() * Math.PI * 2,
-      hue: Math.random() > 0.5 ? 210 : 260,  // blue or purple
+      hue: Math.random() > 0.5 ? 210 : 260,
     }));
   }
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
 
-    // Edges
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i + 1; j < nodes.length; j++) {
         const dx = nodes[i].x - nodes[j].x;
@@ -121,7 +114,6 @@
       }
     }
 
-    // Nodes
     nodes.forEach(n => {
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
@@ -144,7 +136,6 @@
 
   function loop() { update(); draw(); raf = requestAnimationFrame(loop); }
 
-  // Orb mouse parallax
   const orb = document.getElementById('orb-scene');
   document.addEventListener('mousemove', e => {
     const cx = window.innerWidth  / 2;
@@ -154,14 +145,12 @@
     if (orb) orb.style.transform = `rotateY(${mx * 9}deg) rotateX(${-my * 7}deg)`;
   });
 
-  // Resize
   const ro = new ResizeObserver(() => { cancelAnimationFrame(raf); resize(); loop(); });
   ro.observe(document.documentElement);
   resize();
   loop();
 })();
 
-/* ── Subtle parallax on blob-style hero bg ──────────────────── */
 (function () {
   const canvas = document.getElementById('hero-canvas');
   window.addEventListener('scroll', () => {
